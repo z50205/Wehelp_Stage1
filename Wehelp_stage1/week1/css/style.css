@@ -1,0 +1,222 @@
+body { 
+    /* min-width: 360px; */
+    font-size: 20px;
+    margin: 0px;
+ }
+ p{
+    margin:0px;
+ }
+.nav_div{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.nav_logo{
+    float: left;
+    border:10px solid transparent;
+
+}
+.menu_label{
+    display: None;
+    float: right;
+    width: 35px;
+    height:90%;
+    border-right: 10px solid transparent;
+}
+.menu_toggle {
+    display: none;
+}
+nav{
+    float: right;
+}
+.cancel_label{
+    display: none;
+}
+ul.nav_items{
+    list-style-type:none;
+    margin:0px;
+}
+ul.nav_items li {
+    display: inline-block;
+    border:10px solid transparent;
+}
+.info_div{
+    width: 100%;
+    height:250px;
+    background-color:lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info_text{
+    font-size: 40px;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box_div{
+    width:1200px;
+    border:30px solid white;
+}
+.Sbox_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Sbox_items{
+    height: 50px;
+    display: flex;
+    flex:1;
+    align-items: center;
+    background-color:lightblue;
+    border:10px solid white;
+}
+.Sbox_texts{
+    border:10px solid transparent;
+}
+.Bbox_div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.Bbox_items{
+    flex:1 0 15%;
+    display: flex;
+    overflow: hidden;
+}
+
+.Bbox_div div:nth-of-type(5n+1){
+    flex:2 0 30%;
+}
+
+
+.Bbox_items_2{
+    height: 200px;
+    width:100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 10px solid white;
+}
+.star_svg{
+    position:absolute;
+    right:0px;
+    top:0px;
+    border:10px solid transparent;
+    z-index: 2;
+}
+.pic{
+    position:absolute;
+}
+.title_div{
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0px;
+    width: 100%;
+    background-color:rgba(255, 255, 255, 0.5);
+}
+.title_text{
+    border:10px solid transparent;
+}
+
+@media (max-width: 1200px) {
+    .box_div{
+        width:90%;
+    }
+    .Sbox_div {
+        width:100%;
+        flex-wrap: wrap;
+      }
+      
+    .Sbox_div div:nth-of-type(1) {
+        flex:1 0 45%;
+        border:10px solid white;
+      }
+    .Sbox_div div:nth-of-type(2)  {
+        flex:1 0 45%;
+        border:10px solid white;
+      }
+    .Sbox_div div:nth-of-type(3)  {
+        flex:1 0 90%;
+        border:10px solid white;
+    }
+    .Bbox_items{
+        flex:1 0 25%;
+    }
+    .Bbox_div div:nth-of-type(5n+1){
+        flex:1 0 25%;
+    }
+  }
+@media (max-width: 600px) {
+    nav{
+        align-self: flex-start;
+    }
+    .nav_items{
+        display: none;
+        position:fixed;
+        right: 0px;
+        width:180px;
+        height: 100%;
+        background-color: white;
+        z-index: 9;
+        padding: 0px;
+        box-shadow: 4px 4px 10px rgb(0, 0, 0);
+        flex-direction: column;
+    }
+    .nav_items li{
+        height: 40px;
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .cancel_label{
+        display: block;
+        position:absolute;
+        height: 20px;
+        width: 20px;
+        top :0px;
+        right:0px;
+        margin:10px;
+    }
+    .menu_label{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu_toggle + nav .nav_items {
+        display: none;
+    }
+    .menu_toggle:checked + nav .nav_items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .box_div{
+        border-left: none;
+        border-right: none;
+    }
+    .Sbox_div div:nth-of-type(1) {
+        flex:1 0 90%;
+        border:10px solid white;
+      }
+    .Sbox_div div:nth-of-type(2) {
+        flex:1 0 90%;
+        border:10px solid white;
+      }
+    .Bbox_items{
+        flex:1 0 90%;
+    }
+    .Bbox_div div:nth-of-type(5n+1){
+        flex:1 0 90%;
+    }
+  }
