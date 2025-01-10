@@ -51,7 +51,7 @@ ul.nav_items li {
 }
 .info_text{
     font-size: 40px;
-    letter-spacing: -1.5px;  
+    text-align: center;
 }
 .content{
     display: flex;
@@ -219,5 +219,10 @@ ul.nav_items li {
     }
     .Bbox_div div:nth-of-type(5n+1){
         flex:1 0 90%;
+    }
+  }
+  @media (max-width: 380px) {
+    .info_text{
+        letter-spacing: -2.0px;  
     }
   }
