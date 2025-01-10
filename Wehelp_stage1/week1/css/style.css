@@ -223,6 +223,6 @@ ul.nav_items li {
   }
   @media (max-width: 380px) {
     .info_text{
-        letter-spacing: -2.0px;  
+        letter-spacing: -3.0px;  
     }
   }
