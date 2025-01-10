@@ -51,6 +51,7 @@ ul.nav_items li {
 }
 .info_text{
     font-size: 40px;
+    white-space: nowrap;
 }
 .content{
     display: flex;
