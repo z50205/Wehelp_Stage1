@@ -1,0 +1,64 @@
+.flex {
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.wrapper {
+    display: grid;
+    grid-template-columns:15vw 15vw 15vw 15vw 15vw;
+    grid-template-rows:30px 200px;
+  }
+.grid_title {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgb(255, 235, 184);
+    border:1px solid black;
+  }
+.grid_node {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgb(255, 248, 232);
+    border:1px solid black;
+  }
+.answer_node {
+    text-align: center;
+    width:100%;
+    margin: 1px;
+    font-style: italic;
+  }
+  @media (max-width: 600px){
+    .chinese_text {
+        text-align: center;
+        width:100%;
+        margin: 1px;
+        font-size: 12px;
+      }
+    
+  }
+  @media (max-width: 450px){
+    .chinese_text {
+        text-align: center;
+        width:100%;
+        margin: 1px;
+        font-size: 10px;
+      }
+    
+  }
+  @media (max-width: 380px){
+    .chinese_text {
+        text-align: center;
+        width:100%;
+        margin: 1px;
+        font-size: 8px;
+      }
+    
+  }
+  
