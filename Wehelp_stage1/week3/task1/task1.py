@@ -1,16 +1,24 @@
 import json
 import os
 import csv
+import http.client
 
 # Step1.1：讀取各景點資料為json
-spot_info_fp=os.path.join(os.path.dirname(__file__),"..","taipei-attractions-assignment-1")
-spot_info_f=open(spot_info_fp,"r",encoding="utf-8")
-spot_info_json=json.load(spot_info_f)
+host="padax.github.io"
+href="/taipei-day-trip-resources/taipei-attractions-assignment-1"
+conn=http.client.HTTPSConnection(host)
+conn.request("GET", href)
+response = conn.getresponse()
+htmlSource=response.read()
+spot_info_json=json.loads(htmlSource)
 
 # Step1.2：讀取各捷運站資料為json
-mrt_info_fp=os.path.join(os.path.dirname(__file__),"..","taipei-attractions-assignment-2")
-mrt_info_f=open(mrt_info_fp,"r",encoding="utf-8")
-mrt_info_json=json.load(mrt_info_f)
+href="/taipei-day-trip-resources/taipei-attractions-assignment-2"
+conn=http.client.HTTPSConnection(host)
+conn.request("GET", href)
+response = conn.getresponse()
+htmlSource=response.read()
+mrt_info_json=json.loads(htmlSource)
 
 # Step2.1：初始化景點字典，以流水號為Key(兩資料應以SERIAL_NO為外鍵，故以SERIAL_NO為Key，不然會要嵌套兩個for去比SERIAL_NO)
 spot_dict={}
