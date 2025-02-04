@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block content %}
+<div class="nav"><h1 class="navtitle">歡迎光臨，請輸入帳號密碼</h1></div>
+<div class="content">
+    <div class="title">登入系統</div>
+    <form action="/signin" method="post" class="formfield" id="userform" onkeydown="if(event.keyCode === 13) return false">
+        <div class="formitem"><label>帳號</label><input type="text" name="username" /></div>
+        <div class="formitem"><label>密碼</label><input type="password" name="password" /></div>
+        <div class="formitem">同意條款<input type="checkbox" id="confirmcheckbox" /></div>
+        <div class="formitem"><button>登入</button></div>
+    </form>
+    <div class="title">計算正整數的平方</div>
+    <form action="/signin" method="post" class="formfield" id="userform" onkeydown="if(event.keyCode === 13) return false">
+        <div class="formitem"><label>正整數</label><input type="text" id="posint" /></div>
+        <div class="formitem"><button type="button" onclick="fetchsquare()" id="calbut">計算</button></div>
+    </form>
+</div>
+    <script src="{{ url_for('static', path='/script.js') }}"></script>
+{% endblock %}
