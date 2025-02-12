@@ -48,7 +48,7 @@ order by time desc;
 ```sql
 select * from member
 order by time desc
-limit 3;
+limit 1,3;
 ```
 #### 命令列截圖
 ![task3_4](./pics/task3_4.png)

@@ -17,7 +17,7 @@ async def index(request: Request):
     )
 
 @router.post("/signin", response_class=HTMLResponse, tags=["signin"])
-async def signin_user(request: Request,userdata:UserData=Form()):
+async def signin_user(request: Request,userdata: Annotated[UserData, Form()]):
     if userdata.username=="test" and userdata.password=="test" :
         request.session["SIGNED-IN"]=True
         redirect_url=request.url_for('signin_success') 
