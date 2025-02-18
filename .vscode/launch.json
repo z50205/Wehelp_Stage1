@@ -14,7 +14,7 @@
                 "--reload"
             ],
             "jinja": true,
-            "cwd": "${workspaceFolder}/Wehelp_stage1/week4/app"
+            "cwd": "${workspaceFolder}/Wehelp_stage1/week6/app"
         }
     ]
 }
