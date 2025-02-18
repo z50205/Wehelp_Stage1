@@ -63,6 +63,10 @@ async def signin_error(request: Request,message:str):
         showMessage="帳號或密碼錯誤"
     elif message=="repeated":
         showMessage="帳號已使用過"
+    elif message=="404":
+        showMessage="頁面未找到"
+    elif message=="405":
+        showMessage="未開放此功能"
     return templates.TemplateResponse(
         request=request, name="error.html",context={"message": showMessage}
     )
@@ -78,12 +82,11 @@ async def create_message(request: Request,message: str=Form(...)):
     redirect_url=request.url_for('signin_success')
     return RedirectResponse(redirect_url,status_code=303)
 
-@router.post("/deleteMessage", response_class=HTMLResponse,dependencies=[Depends(login_required)], tags=["createmessage"])
+@router.post("/deleteMessage", response_class=HTMLResponse,dependencies=[Depends(login_required)], tags=["deletemessage"])
 async def delete_message(request: Request,id:int=Form(...)):
     mes=MessageData.query_message(id)
     if request.session["User"][0]==mes.member_id:
         MessageData.delete_message(id)
     redirect_url=request.url_for('signin_success')
     return RedirectResponse(redirect_url,status_code=303)
-    
 
