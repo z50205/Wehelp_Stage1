@@ -1,0 +1,45 @@
+.nav{
+    background-color:darkblue;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navtitle{
+    padding: 5px;
+    color: white;
+}
+.content{
+    margin: 20px;
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    width:100%;
+    text-align: center;
+    font-weight: 700;
+}
+.formfield{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.formitem{
+    width:100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.message{
+    margin:20px;
+    text-align: center;
+}
+.delete{
+    margin:5px;
+}

@@ -3,6 +3,9 @@
 task2_env
 week4_env
 week6_env
+week7_env
 try.css
 try.html
 .env
+.dockerignore
+Dockerfile
