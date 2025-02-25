@@ -91,8 +91,10 @@ async def delete_message(request: Request,id:int=Form(...)):
     redirect_url=request.url_for('signin_success')
     return RedirectResponse(redirect_url,status_code=303)
 
-@router.get("/api/member", response_class=JSONResponse,dependencies=[Depends(login_required)], tags=["queryname"])
+@router.get("/api/member", response_class=JSONResponse, tags=["queryname"])
 async def query_name(request: Request,username:str):
+    if "User" not in request.session:
+        return JSONResponse({"data":None})
     u=UserData.query_username(username)
     if u:
         res={"data":{"id":u.id,"name":u.name,"username":u.username}}
