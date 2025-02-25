@@ -37,6 +37,13 @@ async function updateMemberInfo(){
     headers: new Headers({'content-type': 'application/json'}),
     body:JSON.stringify({"name":updateName}) ,
   });
+  const jsonData=await response.json();
+  let result=document.getElementById("updateresult");
+  if (jsonData.hasOwnProperty("ok")){
+    result.textContent="更新成功";
+  }else{
+    result.textContent="更新失敗";
+  }
   updateMemberName(updateName);
 }
 function updateMemberName(updateName){
